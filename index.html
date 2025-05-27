@@ -33,9 +33,24 @@
 
     <header>
         <div class="container">
-            <nav>
+            <nav class="sticky-nav">
                 <a href="#" class="logo" id="typing-logo"></a>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display:none;">
+                <label for="nav-toggle" class="nav-toggle-label" style="display:none;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
                 <ul class="nav-links">
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -43,6 +58,114 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <style>
+                .sticky-nav {
+                    position: fixed;
+                    top: 20px;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    z-index: 1000;
+                    transition: box-shadow 0.2s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 14px 20px;
+                    margin: 0 auto;
+                    max-width: 1400px;
+                }
+                
+                .sticky-nav .logo {
+                    flex-shrink: 0;
+                }
+                
+                .sticky-nav .nav-links {
+                    display: flex;
+                    align-items: center;
+                    gap: 32px;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                }
+                
+                .sticky-nav .nav-links li a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: 500;
+                    padding: 12px 8px;
+                    transition: color 0.2s;
+                }
+                
+                .sticky-nav .nav-links li a:hover {
+                    color: var(--primary, #2A73CC);
+                }
+                /* Mobile nav styles */
+                
+                @media (max-width: 768px) {
+                    .nav-links {
+                        position: fixed;
+                        top: 0;
+                        right: -100%;
+                        width: 70vw;
+                        height: 100vh;
+                        background: #181c24b2;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding-top: 80px;
+                        padding-left: 32px;
+                        display: flex;
+                        transition: right 0.3s cubic-bezier(.4, 0, .2, 1);
+                        z-index: 100;
+                        box-shadow: -2px 0 16px rgba(0, 0, 0, 0.18);
+                    }
+                    .nav-links li {
+                        margin: 18px 0;
+                    }
+                    .nav-links li a {
+                        color: #fff;
+                        font-size: 1.2rem;
+                        width: 100%;
+                        display: block;
+                        padding: 12px 0;
+                    }
+                    .nav-toggle-label {
+                        display: block !important;
+                        position: absolute;
+                        top: 22px;
+                        right: 24px;
+                        cursor: pointer;
+                        width: 32px;
+                        height: 32px;
+                        z-index: 200;
+                    }
+                    .nav-toggle-label span {
+                        display: block !important;
+                        width: 100%;
+                        height: 4px;
+                        margin: 6px 0;
+                        background: #fff;
+                        transition: 0.3s;
+                    }
+                    /* Show nav-links when nav-toggle is checked */
+                    #nav-toggle:checked~.nav-links {
+                        right: 0;
+                    }
+                    /* Animate hamburger to X */
+                    #nav-toggle:checked+.nav-toggle-label span:nth-child(1) {
+                        transform: translateY(10px) rotate(45deg);
+                    }
+                    #nav-toggle:checked+.nav-toggle-label span:nth-child(2) {
+                        opacity: 0;
+                    }
+                    #nav-toggle:checked+.nav-toggle-label span:nth-child(3) {
+                        transform: translateY(-10px) rotate(-45deg);
+                    }
+                    nav {
+                        position: relative;
+                    }
+                }
+            </style>
         </div>
     </header>
 
@@ -199,42 +322,7 @@
         </div>
     </section>
 
-    <section id="resume">
-        <div class="container">
-            <h2 class="section-title">My Resume</h2>
-            <div class="resume-container" style="text-align: center; margin-top: 40px;">
-                <div class="resume-card" style="max-width: 900px; margin: 0 auto; background: rgba(45, 52, 54, 0); backdrop-filter: blur(10px); padding: 30px; border-radius: 15px; border: 1px solid rgba(53, 28, 239, 0.923);">
-                    <h3 style="margin-bottom: 20px; color: var(--primary);">Download My Resume</h3>
-                    <p style="margin-bottom: 30px; line-height: 1.6;">Get a complete overview of my skills, experience, and education in PDF format.</p>
 
-                    <div class="download-options" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                        <a href="path/to/your-resume.pdf" download="Abijith-CG-Resume.pdf" class="btn" style="display: inline-flex; align-items: center; gap: 8px;">
-                            <i class="fas fa-file-pdf"></i> PDF Version
-                        </a>
-
-                    </div>
-
-                    <div style="margin-top: 40px;">
-                        <h4 style="margin-bottom: 15px;">Key Highlights</h4>
-                        <ul style="text-align: left; max-width: 400px; margin: 0 auto; list-style-type: none;">
-                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary);"></i> Full Stack Web Development skills
-                            </li>
-                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary);"></i> 4+ completed projects
-                            </li>
-                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary);"></i> Multiple certifications
-                            </li>
-                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary);"></i> Continuous learning mindset
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <section id="certifications">
@@ -582,7 +670,42 @@
         </div>
     </section>
 
+    <section id="resume">
+        <div class="container">
+            <h2 class="section-title">My Resume</h2>
+            <div class="resume-container" style="text-align: center; margin-top: 40px;">
+                <div class="resume-card" style="max-width: 900px; margin: 0 auto; background: rgba(45, 52, 54, 0); backdrop-filter: blur(10px); padding: 30px; border-radius: 15px; border: 1px solid rgba(53, 28, 239, 0.923);">
+                    <h3 style="margin-bottom: 20px; color: var(--primary);">Download My Resume</h3>
+                    <p style="margin-bottom: 30px; line-height: 1.6;">Get a complete overview of my skills, experience, and education in PDF format.</p>
 
+                    <div class="download-options" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        <a href="assest/" download="Abijith-CG-Resume.pdf" class="btn" style="display: inline-flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-file-pdf"></i> PDF Version
+                        </a>
+
+                    </div>
+
+                    <div style="margin-top: 40px;">
+                        <h4 style="margin-bottom: 15px;">Key Highlights</h4>
+                        <ul style="text-align: left; max-width: 400px; margin: 0 auto; list-style-type: none;">
+                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
+                                <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary);"></i> Full Stack Web Development skills
+                            </li>
+                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
+                                <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary);"></i> 4+ completed projects
+                            </li>
+                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
+                                <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary);"></i> Multiple certifications
+                            </li>
+                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
+                                <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary);"></i> Continuous learning mindset
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="contact ">
         <div class="container ">
