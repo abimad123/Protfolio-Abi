@@ -78,9 +78,7 @@
      }
 
      handleFlipInteraction();
-     window.addEventListener('resize', () => {
-         location.reload(); // Easiest way to reset all listeners properly
-     });
+    
 
      // --- Typing Effect for Logo ---
      const logoText = "Abijith C G";
