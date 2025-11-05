@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assest/img/DEVMAX_11zon.jpg" rel="icon" type="image/png">
+    <title>Professional Protfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js"></script>
+</head>
+
+
+<body>
+    <!-- Custom Cursor Elements -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- 3D Background Container -->
+    <div id="canvas-container"></div>
+
+    <!-- Section-specific 3D Models -->
+    <div id="hero-model" class="model-container"></div>
+    <div id="skills-model" class="model-container"></div>
+    <div id="projects-model" class="model-container"></div>
+
+    <header>
+        <div class="container">
+            <nav class="sticky-nav">
+                <a href="#" class="logo" id="typing-logo"></a>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display:none;">
+                <label for="nav-toggle" class="nav-toggle-label" style="display:none;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="nav-links">
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    Hi, I'm <span id="typing-hero"></span><br>UI/UX Designer & Full Stack Web Developer
+                </h1>
+                <p>I craft modern, responsive, and user-centered web applications that merge clean code with intuitive design.<br>
+Passionate about creating smooth, accessible, and visually engaging digital experiences.
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-alt" id="about">
+        <div class="container" style="padding-top: 80px; padding-bottom: 10px;">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 48px;">
+                <div style="flex: 1 1 300px; min-width: 260px;">
+                    <img src="assest/img/profile.jpeg" alt="Profile Photo of Abijith" style="width: 100%; max-width: 490px; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.18);">
+                </div>
+                <div style="flex: 1 1 300px; min-width: 260px; text-align: center;">
+                    <h2 class="section-title">About Me</h2>
+      <p style="font-size:18px; line-height:1.8; margin-bottom:15px; text-align:left;">
+ A passionate <strong>UI/UX Designer & Full Stack Web Developer</strong> dedicated to crafting digital experiences that are both visually engaging and technically sound.
+  I enjoy transforming ideas into interactive products by merging design thinking and clean code.
+</p>
+
+<p style="font-size:18px; line-height:1.8; margin-bottom:30px; text-align:left;">
+My process begins with user research and wireframing in Figma, followed by high-fidelity prototyping and seamless front-end
+ implementation using HTML, CSS, JavaScript, React, and PHP. I focus on accessibility, responsive layouts, and micro-interactions that create intuitive, human-centered interfaces.
+
+Currently, I’m expanding my skills through real-world projects that combine UI/UX design principles with full-stack technologies — aiming to bridge the gap
+ between design and development while delivering products that truly make an impact.
+</p>
+                    <div style="display: flex; justify-content: center; gap: 20px;">
+                        <div style="text-align: center;">
+                            <h3 style="font-size: 36px; color: var(--primary);">8+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <h3 style="font-size: 36px; color: var(--primary);">5+</h3>
+                            <p>Technologies Mastered</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <h3 style="font-size: 36px; color: var(--primary);">100%</h3>
+                            <p>Learning Mindset</p>
+                        </div>
+                    </div>
+                    <br>
+                    <a href="#why-hire-me" class="btn" style="padding: 12px 32px; border-radius: 30px; font-size: 1rem;">
+                    Why Hire Me
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            </div>
+        </div>
+    </section>
+
+
+   <section id="skills">
+  <div class="container">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills-container">
+
+      <!-- 🎨 UI/UX & Design Skills -->
+      <div class="skill-card">
+        <h3>UI/UX & Product Design</h3>
+        <p>
+          Figma, Wireframing, User Flows, 
+          Design Systems, Accessibility, Micro-interactions, Usability Testing,Animation
+        </p>
+      </div>
+
+      <!-- 💻 Frontend Development -->
+      <div class="skill-card">
+        <h3>Frontend Development</h3>
+        <p>
+          HTML, CSS, JavaScript, React.js, Tailwind CSS, Bootstrap, Responsive & Interactive Design
+        </p>
+      </div>
+
+      <!-- ⚙️ Backend Development -->
+      <div class="skill-card">
+        <h3>Backend Development</h3>
+        <p>
+          PHP, MySQL, Node.js, RESTful APIs, Authentication, Data Handling
+        </p>
+      </div>
+
+      <!-- 🧰 Tools & Workflow -->
+      <div class="skill-card">
+        <h3>Tools & Workflow</h3>
+        <p>
+          Git, GitHub, VS Code, XAMPP, Chrome DevTools, Canva, Adobe XD, After Effects, Notion
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-container">
+
+                 <div class="project-card">
+                    <img src="assest/img/project/kripa.png" alt=" Kirpa Home solutions" class="project-img">
+                    <div class="project-content">
+                        <h3>Client : Kirpa Home solutions</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">API</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Firebase</span>
+
+                        </div>
+                        <p>
+                           A responsive multi-page product catalog website developed for Kirpa Electronics & Home Appliances. 
+            It features categorized sections for Hardware, Paint, and Kitchen stores, along with search, filters, and enquiry forms. 
+            Integrated an admin dashboard for product management and activity logging. Designed and implemented the full UI/UX, ensuring a modern and user-friendly experience.
+         </p>
+           <div class="project-buttons">   
+                        <a href="https://github.com/abimad123/KirpaRep.git" class="btn">GitHub</a>
+                          <span>
+                     <a href="https://kripahomesolutions.vercel.app/" class="btn">Live Demo</a>
+                     </span>
+                     </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="assest/img/project/in1.png" alt="Smart Portfolio" class="project-img">
+                    <div class="project-content">
+                        <h3>Smart Portfolio Management System</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">HTML/CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <p>
+                            A dynamic web application that allows users to manage and showcase their personal portfolios, including categorized assets like stocks, gold and more. Built using PHP, MySQL, HTML/CSS, and JavaScript, the system supports secure user authentication, profile
+                            customization.
+                        </p>
+  <div class="project-buttons">   
+                        <a href="https://github.com/abimad123/Investment-Portfolio.git" class="btn">GitHub</a>
+                        <span>
+                     <a href="https://investsmart.infinityfreeapp.com/" class="btn">Live Demo</a>
+                     </span>
+                     </div>
+                    </div>
+                </div>
+
+              
+
+                <div class="project-card">
+                    <img src="assest/img/project/My Amazspace.png" alt="myamazspace" class="project-img">
+                    <div class="project-content">
+                        <h3>My Amazspace — Product Recommendation Site</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+      <span class="project-tag">CSS</span>
+      <span class="project-tag">JavaScript</span> 
+      <span class="project-tag">Firebase</span>
+                        </div>
+                        <p>
+                          A curated product recommendation platform featuring dynamic category filters, search, and sorting options. 
+      Designed and built a responsive, minimal UI to enhance discovery and usability. 
+      Developed as a personal project to experiment with product layout and real-time updates using Firebase.
+      </p>
+      <div class="project-buttons">    
+      <a href="https://github.com/abimad123/myamazspace" class="btn" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://myamazspace.vercel.app" class="btn" target="_blank" rel="noopener">Live Demo</a>
+      </div>        
+</div>
+                </div>
+
+         
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- UI/UX Case Studies -->
+<section id="ux-case-studies" style="padding:80px 0;">
+  <div class="container">
+    <h2 class="section-title">UI / UX Case Studies</h2>
+
+    <div class="projects-container" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:26px;">
+
+      <!-- Kirpa Case Study -->
+      <div class="project-card">
+        <img src="assest/img/project/kripa.png" alt="Kirpa Case Study" class="project-img">
+        <div class="project-content">
+          <h3>Kirpa Home Solutions — Case Study</h3>
+          <div class="project-tags">
+            <span class="project-tag">UX Research</span>
+            <span class="project-tag">Figma</span>
+            <span class="project-tag">Prototyping</span>
+            <span class="project-tag">Handoff</span>
+          </div>
+
+          <p>
+           Problem: Disorganized product listings and a lack of admin control made product management difficult.<br>
+Solution: Created a clean, categorized catalog with intuitive search, enquiry flow, and an admin dashboard for real-time product tracking.<br>
+Deliverables: 12 hi-fi screens, user flows, and a Figma component system for seamless handoff.
+          </p>
+
+          <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
+            <a href="https://www.figma.com/file/REPLACE_WITH_KRIPA_FIGMA" class="btn" target="_blank" rel="noopener">Open Prototype</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Smart Portfolio Case Study -->
+      <div class="project-card">
+        <img src="assest/img/project/in1.png" alt="Smart Portfolio Case Study" class="project-img">
+        <div class="project-content">
+          <h3>Smart Portfolio — Case Study</h3>
+          <div class="project-tags">
+            <span class="project-tag">Product Design</span>
+            <span class="project-tag">Figma</span>
+            <span class="project-tag">Micro-interactions</span>
+            <span class="project-tag">Analytics</span>
+          </div>
+
+          <p>
+            <strong>Problem:</strong> Users struggled to view and compare multiple asset types in one place.  
+            <strong>Solution:</strong> Consolidated dashboard with clear hierarchy, improved onboarding, and interactive widgets.  
+            Deliverables: user research summary, dashboard flows, tokenized component library.
+          </p>
+
+          <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
+            <a href="https://www.figma.com/file/REPLACE_WITH_SMART_FIGMA" class="btn" target="_blank" rel="noopener">Open Prototype</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- My Amazspace Case Study -->
+      <div class="project-card">
+        <img src="assest/img/project/My Amazspace.png" alt="My Amazspace Case Study" class="project-img">
+        <div class="project-content">
+          <h3>My Amazspace — Case Study</h3>
+          <div class="project-tags">
+            <span class="project-tag">Product UX</span>
+            <span class="project-tag">Search & Filters</span>
+            <span class="project-tag">Prototyping</span>
+            <span class="project-tag">Frontend</span>
+          </div>
+
+          <p>
+           <strong>Problem:</strong> Users lacked an intuitive way to explore curated products across multiple categories.<br>
+ <strong>Solution:</strong>  Designed a modern, minimalist discovery experience with category filters, persistent search, and prioritized results based on relevance.
+  The design was tested and refined through prototype validation.
+ <br>
+Deliverables: Discovery flow diagrams, hi-fi screens, and clickable prototypes.
+          </p>
+
+          <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
+            <a href="https://www.figma.com/design/1yoP8rSRUTCn5d7Z8ueH42/myamazspze?node-id=0-1&t=37VfAagTBHufFFkp-1" class="btn" target="_blank" rel="noopener">Open Prototype</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>    
+</section>
+
+
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-container">
+                <!-- Certification 1 -->
+                <div class="certification-flip">
+                    <div class="flip-inner">
+                        <div class="flip-front" style="background-image: url('assest/img/certi/IntroductiontoFrontEndDevelopment.jpg'); background-size: cover; background-position: center;">
+                            <div class="cert-logo">M</div>
+                            <h3>Introduction to Front End Development</h3>
+                            <p class="mobile-only" style="color: #2A73CC; font-weight: 500;">Click to view details</p>
+                            <style>
+                                @media (min-width: 769px) {
+                                    .mobile-only {
+                                        display: none !important;
+                                    }
+                                }
+                                
+                                @media (max-width: 768px) {
+                                    .mobile-only {
+                                        display: block !important;
+                                    }
+                                }
+                            </style>
+                        </div>
+                        <div class="flip-back">
+                            <p>Issued: Jan 2025</p>
+                        
+                            <p>Skills: HTML, CSS, JavaScript</p>
+                            <a href="https://coursera.org/share/b04fdab7688e49b46467d9a112d91200" class="btn">View Credential</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certification 2 -->
+                <div class="certification-flip">
+                    <div class="flip-inner">
+                        <div class="flip-front" style="background-image: url('assest/img/certi/Screenshot\ 2025-11-05\ 000107.png'); background-size: cover; background-position: center;">
+                            <div class="cert-logo">L</div>
+                            <h3>Exploring a Career in User Experience Design</h3>
+                            <p class="mobile-only" style="color: #2A73CC; font-weight: 500;">Click to view details</p>
+                       
+                        </div>
+                        <div class="flip-back">
+                            <p>Issued: Sep 2025</p>
+                           
+                            <p>Skills: User Experience (UX) Design, User Research, Design Thinking, Information Architecture, Usability Testing, Prototyping, and Wireframing.</p>
+                            <a href="#" class="btn">View Credential</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certification 3 -->
+                <div class="certification-flip">
+                    <div class="flip-inner">
+                        <div class="flip-front" style="background-image: url('assest/img/certi/Java\ Programming.jpg'); background-size: cover; background-position: center;">
+                            <div class="cert-logo">L</div>
+                            <h3>Java Programming</h3>
+                            <p class="mobile-only" style="color: #2A73CC; font-weight: 500;">Click to view details</p>
+                        
+                        </div>
+                        <div class="flip-back">
+                            <p>Issued: May 2025</p>
+                            <p>Skills: OOP, Arrays, Error handling, Threads, IDE tools</p>
+                            <a href="#" class="btn">View Credential</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certification 4 -->
+                <div class="certification-flip">
+                    <div class="flip-inner">
+                        <div class="flip-front          
+" style="background-image: url('assest/img/certi/FigmaEssential\ Training.png'); background-size: cover; background-position: center;">
+                            <div class="cert-logo">L</div>
+                            <h3>Figma Essential Training</h3>
+                            <p class="mobile-only" style="color: #2A73CC; font-weight: 500;">Click to view details</p>
+                     
+                        </div>
+                        <div class="flip-back">
+                            <p>Issued: Sep 2025</p>
+                            <p>Skills:  Figma, Auto Layout, Components, Variants, Prototyping, Design Systems, Wireframing, UI Design, and Collaboration Tools.</p>
+                            <a href="#" class="btn">View Credential</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certification 5 -->
+                <div class="certification-flip">
+                    <div class="flip-inner              ">
+                        <div class="flip-front              
+" style="background-image: url('assest/img/certi/Web-e-Stan.jpg'); background-size: cover; background-position: center;">
+                            <div class="cert-logo">U</div>
+                            <h3>Web-e-Stan</h3>
+                            <p class="mobile-only" style="color: #2A73CC; font-weight: 500;">Click to view details</p>
+                            <style>
+                                @media (min-width: 769px) {
+                                    .mobile-only {
+                                        display: none !important;
+                                    }
+                                }
+                                
+                                @media (max-width: 768px) {
+                                    .mobile-only { 
+                                        display: block !important;
+                                    }
+                                }
+                            </style>
+                        </div>
+                        <div class="flip-back">
+                            <p>Issued: Jan 2025</p>
+                            <p>Skills: Team collaboration, Web development, HTML, CSS, JavaScript, API, UI design, Problem solving, Time management.</p>
+                            <a href="#" class="btn">View Credential</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certification 6 -->
+                <div class="certification-flip">
+                    <div class="flip-inner            ">
+                        <div class="flip-front  
+" style="background-image: url('assest/img/certi/Getting\ Started\ as\ a\ Full-Stack\ Web\ Developer.png'); background-size: cover; background-position: center;">
+                            <div class="cert-logo">L</div>
+                            <h3>Getting Started as a Full-Stack Web Developer</h3>
+                            <p class="mobile-only" style="color: #2A73CC; font-weight: 500;">Click to view details</p>
+                      
+                        </div>
+                        <div class="flip-back">
+                            <p>Issued: Aug 2025</p>
+                            <p>Skills: Front-End & Back-End Development, HTML, CSS, JavaScript, React, Node.js, Databases, APIs, and Deployment Workflow.</p>
+                            <a href="#" class="btn">View Credential</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+<section id="why-hire-me" style="padding: 80px 0; background: rgba(245, 247, 250, 0); ">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+    <h2 class="section-title" style="margin-bottom: 48px; text-align: center; color: white;">Why Hire Me?</h2>
+    <div class="why-hire-grid">
+
+      <!-- Card 1 -->
+      <div class="why-hire-card" style=" background: rgba(45, 52, 54, 0.7); backdrop-filter: blur(10px); padding: 30px; border-radius: 15px; border: 1px solid rgba(53, 28, 239, 0.923); ">
+        <div class="why-hire-icon"><i class="fas fa-code"></i></div>
+        <h3>Technical Excellence</h3>
+        <p style="color: white; text-align:left;">
+          As a <strong>UI/UX Designer & Full Stack Developer</strong>, I design and build responsive web applications with modern technologies like HTML, CSS, Tailwind, React, PHP, and MySQL. I focus on creating seamless interfaces backed by solid functionality, ensuring every product looks great and works flawlessly.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="why-hire-card" style=" background: rgba(45, 52, 54, 0.7); backdrop-filter: blur(10px); padding: 30px; border-radius: 15px; border: 1px solid rgba(53, 28, 239, 0.923); ">
+        <div class="why-hire-icon"><i class="fas fa-users"></i></div>
+        <h3>Leadership & Collaboration</h3>
+        <p style="color: white; text-align:left;">
+          I thrive in team environments, leading design and development phases collaboratively. From coordinating project roles to using GitHub for version control, I ensure smooth teamwork and timely delivery — balancing creativity with structure in every project.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="why-hire-card" style=" background: rgba(45, 52, 54, 0.7); backdrop-filter: blur(10px); padding: 30px; border-radius: 15px; border: 1px solid rgba(53, 28, 239, 0.923); ">
+        <div class="why-hire-icon"><i class="fas fa-lightbulb"></i></div>
+        <h3>Creative & User-Centered Thinking</h3>
+        <p style="color: white; text-align:left;">
+          Every project begins with understanding the user. I apply <strong>design thinking</strong>, wireframing, and rapid prototyping in Figma to craft interfaces that are not only visually appealing but also intuitive, accessible, and purposeful.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="why-hire-card" style=" background: rgba(45, 52, 54, 0.7); backdrop-filter: blur(10px); padding: 30px; border-radius: 15px; border: 1px solid rgba(53, 28, 239, 0.923); ">
+        <div class="why-hire-icon"><i class="fas fa-cogs"></i></div>
+        <h3>Problem-Solving & Implementation</h3>
+        <p style="color: white; text-align:left;">
+          I love solving real-world challenges through code and design. From optimizing UI performance to simplifying user flows, I create efficient, user-friendly, and scalable solutions that deliver practical results and measurable improvements.
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="why-hire-card" style=" background: rgba(45, 52, 54, 0.7); backdrop-filter: blur(10px); padding: 30px; border-radius: 15px; border: 1px solid rgba(53, 28, 239, 0.923); ">
+        <div class="why-hire-icon"><i class="fas fa-globe"></i></div>
+        <h3>Professional Exposure</h3>
+        <p style="color: white; text-align:left;">
+          Through internships and live projects with companies like Kirpa Electronics and global simulations from Tata and ANZ, I’ve learned to adapt designs and systems for real business use — ensuring both quality and client satisfaction.
+        </p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="why-hire-card" style=" background: rgba(45, 52, 54, 0.7); backdrop-filter: blur(10px); padding: 30px; border-radius: 15px; border: 1px solid rgba(53, 28, 239, 0.923); ">
+        <div class="why-hire-icon"><i class="fas fa-rocket"></i></div>
+        <h3>Growth & Innovation Mindset</h3>
+        <p style="color: white; text-align:left;">
+          I’m continuously evolving — learning new frameworks, exploring <strong>Figma auto-layouts</strong>, experimenting with motion design using <strong>Lottie</strong>, and improving my coding efficiency. I adapt quickly and love pushing creative and technical boundaries.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <section id="resume">
+        <div class="container">
+            <h2 class="section-title">My Resume</h2>
+            <div class="resume-container" style="text-align: center; margin-top: 40px;">
+                <div class="resume-card" style="max-width: 900px; margin: 0 auto; background: rgba(45, 52, 54, 0); backdrop-filter: blur(10px); padding: 30px; border-radius: 15px; border: 1px solid rgba(53, 28, 239, 0.923);">
+                    <h3 style="margin-bottom: 20px; color: var(--primary);">Download My Resume</h3>
+                    <p style="margin-bottom: 30px; line-height: 1.6;">Get a complete overview of my skills, experience, and education in PDF format.</p>
+
+                    <div class="download-options" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        <a href="assest/" download="Abijith-CG-Resume.pdf" class="btn" style="display: inline-flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-file-pdf"></i> PDF Version
+                        </a>
+
+                    </div>
+ 
+                    <div style="margin-top: 40px;">
+                        <h4 style="margin-bottom: 15px;">Key Highlights</h4>
+                        <ul style="text-align: left; max-width: 400px; margin: 0 auto; list-style-type: none;">
+                          <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary);"></i>
+                            <strong>UI/UX & Full Stack Expertise</strong>     </li>
+                        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary);"></i>
+                            <strong>Hands-on Project Experience</strong>    </li>
+                        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary);"></i>
+                            <strong>Certified by Global Platforms</strong>      </li>
+                        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--primary);"></i>
+                            <strong>Collaboration & Growth Mindset</strong>    </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact ">
+        <div class="container ">
+            <h2 class="section-title ">Get In Touch</h2>
+            <div class="contact-form ">
+                <form id="contact-form ">
+                    <div id="form-response " class="form-response " style="display: none; "></div>
+                    <div class="form-group ">
+                        <label for="name ">Name</label>
+                        <input type="text " id="name " name="name " required>
+                    </div>
+                    <div class="form-group ">
+                        <label for="email ">Email</label>
+                        <input type="email " id="email " name="email " required>
+                    </div>
+                    <div class="form-group ">
+                        <label for="subject ">Subject</label>
+                        <input type="text " id="subject " name="subject " required>
+                    </div>
+                    <div class="form-group ">
+                        <label for="message ">Message</label>
+                        <textarea id="message " name="message " required></textarea>
+                    </div>
+                    <center> <button type="submit " class="btn ">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const form = document.getElementById("contact-form ");
+        const responseMessage = document.getElementById("form-response ");
+
+        form.addEventListener("submit ", async function(e) {
+            e.preventDefault();
+
+            // Show loading state
+            responseMessage.innerText = "Sending your message... ";
+            responseMessage.style.display = "block ";
+            responseMessage.classList.remove("text-danger ");
+            responseMessage.classList.add("text-info ");
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch("https://formspree.io/f/mbljjylg ", {
+                    method: "POST ",
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    responseMessage.innerHTML = "✅ Your message has been sent successfully! ";
+                    responseMessage.classList.remove("text-info ", "text-danger ");
+                    responseMessage.classList.add("text-success ");
+                    form.reset();
+
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        responseMessage.style.display = "none ";
+                    }, 5000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                responseMessage.innerHTML = "❌ Something went wrong. Please try again. ";  
+                responseMessage.classList.remove("text-info ", "text-success ");
+                responseMessage.classList.add("text-danger ");
+            }
+        });
+    </script>
+
+    <footer>
+        <div class="container ">
+            <ul class="social-links ">
+                <li><a href="https://github.com/abimad123 "><i class="fab fa-github "></i></a></li>
+                <li><a href="https://www.linkedin.com/in/abijith-c-g "><i class="fab fa-linkedin-in "></i></a></li>
+               <li><a href="https://www.figma.com/@abijithc140" title="Figma" target="_blank" rel="noopener">
+    <svg width="22" height="22" viewBox="0 0 48 48" fill="none" style="vertical-align: middle;">
+      <rect width="48" height="48" rx="12" fill="#F24E1E"/>
+      <path d="M24 24C24 21.8 25.8 20 28 20C30.2 20 32 21.8 32 24C32 26.2 30.2 28 28 28C25.8 28 24 26.2 24 24Z" fill="white"/>
+      <path d="M16 24C16 21.8 17.8 20 20 20H24V28H20C17.8 28 16 26.2 16 24Z" fill="white"/>
+      <path d="M20 12H24V20H20C17.8 20 16 18.2 16 16C16 13.8 17.8 12 20 12Z" fill="white"/>
+      <path d="M24 12H28C30.2 12 32 13.8 32 16C32 18.2 30.2 20 28 20H24V12Z" fill="white"/>
+      <path d="M20 28H24V36H20C17.8 36 16 34.2 16 32C16 29.8 17.8 28 20 28Z" fill="white"/>
+    </svg> </a> </li>
+
+              <li>
+  <a href="https://leetcode.com/u/Abijith_C_G/" title="LeetCode" target="_blank" rel="noopener">
+    <svg width="22" height="22" viewBox="0 0 48 48" fill="none" style="vertical-align: middle;">
+      <rect width="48" height="48" rx="12" fill="#FFA116"/>
+      <path d="M28.5 34L21.5 27L28.5 20M24 12C17.4 12 12 17.4 12 24C12 30.6 17.4 36 24 36C30.6 36 36 30.6 36 24C36 17.4 30.6 12 24 12Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</li>
+
+                <li>
+                    <a href="https://www.coursera.org/user/32184ff496dbe186bb7fd175bd6db17b " title="Coursera " target="_blank " rel="noopener ">
+                        <svg width="22 " height="22 " viewBox="0 0 48 48 " fill="none " style="vertical-align: middle; ">
+                            <rect width="48 " height="48 " rx="12 " fill="#2A73CC "/>
+                            <path d="M34.5 32.5C33.5 34.5 30.5 36 26.5 36C19.5 36 14 31.5 14 24C14 16.5 19.5 12 26.5 12C30.5 12 33.5 13.5 34.5 15.5L28.5 18.5C28 17.5 27 16.5 25.5 16.5C22.5 16.5 21 19 21 24C21 29 22.5 31.5 25.5 31.5C27 31.5 28 30.5 28.5
+                            29.5L34.5 32.5Z " fill="white "/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <p class="copyright ">© 2024 <a href="https://devmaxstudio.com " target="_blank " style="color: inherit; text-decoration: none; ">Abijith C G</a>. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js " crossorigin="anonymous "></script>
+    <script src="script.js "></script>
+</body>
+
+</html>
